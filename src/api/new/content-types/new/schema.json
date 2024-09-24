@@ -4,7 +4,8 @@
   "info": {
     "singularName": "new",
     "pluralName": "news",
-    "displayName": "news"
+    "displayName": "news",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,17 +19,28 @@
       "type": "text"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "image_url": {
+      "type": "string",
+      "required": false
     },
     "author": {
       "type": "string"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "categorias"
     }
   }
 }
