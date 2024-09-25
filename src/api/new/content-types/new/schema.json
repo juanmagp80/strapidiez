@@ -36,11 +36,11 @@
     "author": {
       "type": "string"
     },
-    "category": {
+    "noticias": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "oneToMany",
       "target": "api::category.category",
-      "inversedBy": "categorias"
+      "mappedBy": "categoria"
     }
   }
 }

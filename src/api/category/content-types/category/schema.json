@@ -15,11 +15,11 @@
     "name": {
       "type": "string"
     },
-    "categorias": {
+    "categoria": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToOne",
       "target": "api::new.new",
-      "mappedBy": "category"
+      "inversedBy": "noticias"
     }
   }
 }
